@@ -1,6 +1,5 @@
-package com.lessons.leetcode;
+package com.lessons.leetcode.two_sum;
 
-import com.lessons.leetcode.two_sum.MySolution;
 import java.util.Arrays;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
