@@ -1,4 +1,4 @@
-package com.lessons.leetcode;
+package com.lessons.leetcode.binary_search;
 
 /**
  * <a href="https://leetcode.com/problems/binary-search/">...</a>
