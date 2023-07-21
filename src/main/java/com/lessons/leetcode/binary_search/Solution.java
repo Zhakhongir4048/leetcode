@@ -1,5 +1,8 @@
 package com.lessons.leetcode.binary_search;
 
+/**
+ * <a href="https://leetcode.com/problems/guess-number-higher-or-lower/description/">...</a>
+ */
 public class Solution {
 
     private final GuessGameApi guessGameApi = new GuessGame();
