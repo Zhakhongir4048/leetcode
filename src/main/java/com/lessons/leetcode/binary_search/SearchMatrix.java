@@ -1,23 +1,26 @@
 package com.lessons.leetcode.binary_search;
 
+/**
+ * <a href="https://leetcode.com/problems/search-a-2d-matrix/description/">...</a>
+ */
 public class SearchMatrix {
 
     public static boolean searchMatrix(int[][] matrix, int target) {
         for (int i = 0; i < matrix.length; i++) {
-            int n = matrix[i].length - 1;
+            int lengthColumn = matrix[i].length - 1;
             // Finding that row.
-            if (target <= matrix[i][n]) {
+            if (target <= matrix[i][lengthColumn]) {
                 // Binary Search
-                int s = 0;
-                int e = n;
-                while (s <= e) {
-                    int mid = s + (e - s) / 2;
+                int left = 0;
+                int right = lengthColumn;
+                while (left <= right) {
+                    int mid = left + (right - left) / 2;
                     if (matrix[i][mid] == target)
                         return true;
                     else if (matrix[i][mid] < target) {
-                        s = mid + 1;
+                        left = mid + 1;
                     } else {
-                        e = mid - 1;
+                        right = mid - 1;
                     }
                 }
             }
