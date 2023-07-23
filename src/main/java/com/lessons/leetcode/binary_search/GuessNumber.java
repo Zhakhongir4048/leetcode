@@ -11,7 +11,7 @@ public class GuessNumber {
         int left = 1;
         int right = n;
         while (left <= right) {
-            int mid = left + (right - left) / 2;
+            int mid = (right + left) / 2;
             int res = guessGameApi.guess(mid);
             if (res == 0)
                 return mid;

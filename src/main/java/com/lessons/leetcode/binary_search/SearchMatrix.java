@@ -14,7 +14,7 @@ public class SearchMatrix {
                 int left = 0;
                 int right = lengthColumn;
                 while (left <= right) {
-                    int mid = left + (right - left) / 2;
+                    int mid = (right + left) / 2;
                     if (matrix[i][mid] == target)
                         return true;
                     else if (matrix[i][mid] < target) {
