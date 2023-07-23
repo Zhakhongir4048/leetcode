@@ -3,7 +3,7 @@ package com.lessons.leetcode.binary_search;
 /**
  * <a href="https://leetcode.com/problems/guess-number-higher-or-lower/description/">...</a>
  */
-public class Solution {
+public class GuessNumber {
 
     private final GuessGameApi guessGameApi = new GuessGame();
 
@@ -24,7 +24,7 @@ public class Solution {
     }
 
     public static void main(String[] args) {
-        System.out.println(new Solution().guessNumber(100));
+        System.out.println(new GuessNumber().guessNumber(100));
     }
 
 }
