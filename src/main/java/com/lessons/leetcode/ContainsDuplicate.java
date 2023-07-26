@@ -5,6 +5,7 @@ import java.util.Set;
 
 /**
  * <a href="https://leetcode.com/problems/contains-duplicate/description/">...</a>
+ * timer 00 : 01 : 41
  */
 public class ContainsDuplicate {
 
