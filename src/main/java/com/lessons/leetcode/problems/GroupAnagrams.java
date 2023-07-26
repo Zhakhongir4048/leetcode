@@ -4,7 +4,7 @@ import java.util.*;
 
 /**
  * <a href="https://leetcode.com/problems/group-anagrams/">...</a>
- * timer 00 : 03 : 37
+ * timer 00 : 03 : 34
  */
 public class GroupAnagrams {
 
@@ -20,10 +20,6 @@ public class GroupAnagrams {
             map.get(sortedWord).add(word);
         }
         return new ArrayList<>(map.values());
-    }
-
-    public static void main(String[] args) {
-        System.out.println(new GroupAnagrams().groupAnagrams(new String[]{"eat", "tea", "tan", "ate", "nat", "bat"}));
     }
 
 }
