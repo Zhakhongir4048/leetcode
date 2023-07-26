@@ -1,5 +1,6 @@
-package com.lessons.leetcode;
+package com.lessons.leetcode.problems;
 
+import com.lessons.leetcode.problems.PalindromeNumber;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 

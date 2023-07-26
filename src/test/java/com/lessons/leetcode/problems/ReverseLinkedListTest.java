@@ -1,8 +1,8 @@
-package com.lessons.leetcode;
+package com.lessons.leetcode.problems;
 
-import static com.lessons.leetcode.ReverseLinkedList.reverseList;
+import static com.lessons.leetcode.problems.ReverseLinkedList.reverseList;
 
-import com.lessons.leetcode.ReverseLinkedList.ListNode;
+import com.lessons.leetcode.problems.ReverseLinkedList.ListNode;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 

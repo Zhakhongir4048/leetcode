@@ -1,5 +1,6 @@
-package com.lessons.leetcode;
+package com.lessons.leetcode.problems;
 
+import com.lessons.leetcode.problems.ContainsDuplicate;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
