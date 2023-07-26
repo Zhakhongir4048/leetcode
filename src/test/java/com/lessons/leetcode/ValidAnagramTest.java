@@ -4,6 +4,8 @@ import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
+import static org.assertj.core.api.Assertions.*;
+
 class ValidAnagramTest {
 
     private static ValidAnagram validAnagram;
@@ -15,12 +17,12 @@ class ValidAnagramTest {
 
     @Test
     void isAnagramCase1() {
-        Assertions.assertThat(validAnagram.isAnagram("anagram", "nagaram")).isTrue();
+        assertThat(validAnagram.isAnagram("anagram", "nagaram")).isTrue();
     }
 
     @Test
     void isAnagramCase2() {
-        Assertions.assertThat(validAnagram.isAnagram("rat", "car")).isFalse();
+        assertThat(validAnagram.isAnagram("rat", "car")).isFalse();
     }
 
 }
