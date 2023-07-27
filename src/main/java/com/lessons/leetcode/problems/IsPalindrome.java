@@ -2,7 +2,7 @@ package com.lessons.leetcode.problems;
 
 /**
  * <a href="https://leetcode.com/problems/valid-palindrome/description/">...</a>
- * timer 00 : 05 : 32
+ * timer 00 : 03 : 19
  */
 public class IsPalindrome {
 
