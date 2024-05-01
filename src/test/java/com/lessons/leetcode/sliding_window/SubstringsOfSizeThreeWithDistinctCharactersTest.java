@@ -18,4 +18,18 @@ class SubstringsOfSizeThreeWithDistinctCharactersTest {
                 .assertThat(SubstringsOfSizeThreeWithDistinctCharacters.countGoodSubstrings("xyzzaz"))
                 .isEqualTo(1);
     }
+
+    @Test
+    void countGoodSubstrings2Case1() {
+        Assertions
+                .assertThat(SubstringsOfSizeThreeWithDistinctCharacters.countGoodSubstrings2("aababcabc"))
+                .isEqualTo(4);
+    }
+
+    @Test
+    void countGoodSubstrings2Case2() {
+        Assertions
+                .assertThat(SubstringsOfSizeThreeWithDistinctCharacters.countGoodSubstrings2("xyzzaz"))
+                .isEqualTo(1);
+    }
 }
