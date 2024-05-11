@@ -39,4 +39,25 @@ public class MaximumLengthSubstringWithTwoOccurrences {
         }
         return count;
     }
+
+    public static int majorityElement(int[] nums) {
+        HashMap<Integer, Integer> map = new HashMap<>();
+        int count = 0;
+        int result = 0;
+        for (int num : nums) {
+            map.put(num, map.getOrDefault(num, 0) + 1);
+            int value = map.get(num);
+            if (value > count) {
+                count = value;
+                result = num;
+            }
+        }
+        map.clear();
+        return result;
+    }
+
+    public static void main(String[] args) {
+        System.out.println(majorityElement(new int[]{3, 2, 3}));
+    }
 }
+// TODO тут только второе решение добавить нужно и дальше написать unit тесты, а так всё закончено
