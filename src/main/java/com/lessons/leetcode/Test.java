@@ -1,0 +1,36 @@
+package com.lessons.leetcode;
+
+public class Test {
+
+    public static void main(String[] args) {
+        // ~
+        int var = 121; // двоичный вид: 00000000 00000000 00000000 01111001
+        int not_v = ~var; // двоичный вид: 11111111 11111111 11111111 10000110 (число -122) 7 младших бит 0000110 -> 121 + 1
+        System.out.println(not_v); // - 121
+
+        // &
+        byte flags = 5; // 00000101
+        byte mask = 4; // 00000100
+
+        System.out.println(flags & mask); // 00000100 число 4
+
+        byte f = 13; // 00001101
+        byte m = 5; // 00000101
+
+        System.out.println((byte) (f & ~m)); // двоичная запись результат = 00001000, число 8
+
+        // |
+        byte j = 8; // 00001000
+        byte i = 5; // 00000101
+
+        System.out.println((byte) (j | i)); // 00001101 число 13
+
+        // ^ XOR, переключение бита, при XOR не происходит потери данных
+        byte k = 9; // 00001001
+        byte d = 1; // 00000001
+
+        byte x = (byte) (k ^ d);
+        System.out.println(x); // 00001000 (число 8)
+        System.out.println(x ^ d); // 00001001 (число 9)
+    }
+}

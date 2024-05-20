@@ -3,7 +3,7 @@ package com.lessons.leetcode.binary_search;
 /**
  * <a href="https://leetcode.com/problems/binary-search/">...</a>
  */
-public class BinarySearch {
+public class BinarySearch704 {
 
     public int search(int[] nums, int target) {
         // Начальный индекс
@@ -30,10 +30,4 @@ public class BinarySearch {
         // Если не найдём, то возвращаем -1
         return -1;
     }
-
-    public static void main(String[] args) {
-        int search = new BinarySearch().search(new int[]{-1, 0, 3, 5, 9, 12}, 9);
-        System.out.println("search = " + search);
-    }
-
 }
