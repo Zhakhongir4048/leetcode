@@ -30,4 +30,12 @@ public class BinarySearch704 {
         // Если не найдём, то возвращаем -1
         return -1;
     }
+
+    public int binarySearchRec(int[] nums, int target, int start, int end) {
+        if (start > end) return -1;
+        int mid = start + (end - start) / 2;
+        if (nums[mid] == target) return mid;
+        if (nums[mid] < target) return binarySearchRec(nums, target, mid + 1, end);
+        else return binarySearchRec(nums, target, start, mid - 1);
+    }
 }
