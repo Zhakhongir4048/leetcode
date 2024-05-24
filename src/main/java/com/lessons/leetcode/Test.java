@@ -1,5 +1,8 @@
 package com.lessons.leetcode;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Test {
 
     public static void main(String[] args) {
@@ -32,5 +35,27 @@ public class Test {
         byte x = (byte) (k ^ d);
         System.out.println(x); // 00001000 (число 8)
         System.out.println(x ^ d); // 00001001 (число 9)
+
+
+        String[] messages =
+                {"Сегодня в #ПИТЕР идет #ДОЖДЬ",
+                        "Вчера в #москва был #дождь",
+                        "Сегодня в #МОСКВА хорошая погода",
+                        "Завтра приеду в #Москва"
+                };
+
+        List<String> result = new ArrayList<>();
+        StringBuilder builder = new StringBuilder();
+
+        for (String message : messages) {
+            String[] split = message.split(" ");
+            for (String str : split) {
+                if (str.startsWith("#")) {
+                    result.add(builder.append(str).reverse().toString());
+                    builder.delete(0, builder.length());
+                }
+            }
+        }
+        System.out.println(result);
     }
 }
