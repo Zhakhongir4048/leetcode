@@ -6,4 +6,5 @@
 4) https://leetcode.com/problems/first-bad-version/description/
 5) https://leetcode.com/problems/search-insert-position/description/
 6) https://leetcode.com/problems/valid-parentheses/description/
-7) https://leetcode.com/problems/sqrtx/description/
+7) https://leetcode.com/problems/find-words-containing-character/description/
+8) https://leetcode.com/problems/valid-palindrome/description/
