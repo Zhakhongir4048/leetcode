@@ -1,7 +1,11 @@
-package com.lessons.leetcode.array;
+package com.lessons.leetcode.math;
 
 import java.math.BigInteger;
 
+/**
+ * Ready
+ * <a href="https://leetcode.com/problems/plus-one/description/">...</a>
+ */
 public class PlusOne66 {
 
     public int[] plusOne(int[] digits) {
