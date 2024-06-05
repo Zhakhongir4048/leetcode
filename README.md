@@ -9,3 +9,5 @@
 7) https://leetcode.com/problems/find-words-containing-character/description/
 8) https://leetcode.com/problems/valid-palindrome/description/
 9) https://leetcode.com/problems/longest-substring-without-repeating-characters/description/
+10) https://leetcode.com/problems/two-sum/description/
+11) https://leetcode.com/problems/length-of-last-word/description/
