@@ -1,6 +1,8 @@
 package com.lessons.leetcode;
 
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 
 public class Test2 {
     public static String minWindow(String s, String t) {
@@ -17,11 +19,32 @@ public class Test2 {
 
         int count = 0;
 
+        List<String> stringList = new ArrayList<>();
+
         for (int right = 0; right < array.length; right++) {
             mapS.put(array[right], mapS.getOrDefault(array[right], 0) + 1);
 
+            if (mapT.containsKey(array[right]) && mapS.get(array[right]) > mapT.get(array[right])) {
+                mapS.put(array[left], mapS.get(array[left]) - 1);
+                if (mapS.get(array[left]) == 0) {
+                    mapS.remove(array[left]);
+                }
+                left++;
+
+                while (!mapT.containsKey(array[left])) {
+                    mapS.put(array[left], mapS.get(array[left]) - 1);
+                    if (mapS.get(array[left]) == 0) {
+                        mapS.remove(array[left]);
+                    }
+                    left++;
+                }
+            }
+
             if (mapS.entrySet().containsAll(mapT.entrySet())) {
-                count = Math.max(count, right - left + 1);
+                count = right - left + 1;
+
+
+
                 mapS.put(array[left], mapS.get(array[left]) - 1);
                 if (mapS.get(array[left]) == 0) {
                     mapS.remove(array[left]);
