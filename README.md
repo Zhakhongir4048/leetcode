@@ -13,3 +13,4 @@
 11) https://leetcode.com/problems/length-of-last-word/description/
 12) https://leetcode.com/problems/plus-one/description/
 13) https://leetcode.com/problems/reverse-integer/description/
+14) https://leetcode.com/problems/palindrome-number/description/
