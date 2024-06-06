@@ -3,10 +3,10 @@ package com.lessons.leetcode.sliding_window;
 import java.util.HashMap;
 
 /**
+ * Ready
  * <a href="https://leetcode.com/problems/maximum-length-substring-with-two-occurrences/description/">...</a>
- * 5 m 35 s
  */
-public class MaximumLengthSubstringWithTwoOccurrences {
+public class MaximumLengthSubstringWithTwoOccurrences3090 {
 
     /**
      * Пример: String s = "bcbbbcba".
@@ -21,43 +21,21 @@ public class MaximumLengthSubstringWithTwoOccurrences {
      * Ответ: 4
      */
     public static int maximumLengthSubstring(String s) {
-        char[] a = s.toCharArray();
-        int n = a.length;
+        char[] array = s.toCharArray();
         int l = 0;
         int count = 0;
         HashMap<Character, Integer> map = new HashMap<>();
-        for (int r = 0; r < n; r++) {
-            map.put(a[r], map.getOrDefault(a[r], 0) + 1);
-            while (map.get(a[r]) > 2) {
-                map.put(a[l], map.get(a[l]) - 1);
-                if (map.get(a[l]) == 0) {
-                    map.remove(a[l]);
+        for (int r = 0; r < array.length; r++) {
+            map.put(array[r], map.getOrDefault(array[r], 0) + 1);
+            while (map.get(array[r]) > 2) {
+                map.put(array[l], map.get(array[l]) - 1);
+                if (map.get(array[l]) == 0) {
+                    map.remove(array[l]);
                 }
                 l++;
             }
-            count = Math.max(count, r - l + 1);
+            count = Math.max(count, (r - l) + 1);
         }
         return count;
     }
-
-    public static int majorityElement(int[] nums) {
-        HashMap<Integer, Integer> map = new HashMap<>();
-        int count = 0;
-        int result = 0;
-        for (int num : nums) {
-            map.put(num, map.getOrDefault(num, 0) + 1);
-            int value = map.get(num);
-            if (value > count) {
-                count = value;
-                result = num;
-            }
-        }
-        map.clear();
-        return result;
-    }
-
-    public static void main(String[] args) {
-        System.out.println(majorityElement(new int[]{3, 2, 3}));
-    }
 }
-// TODO тут только второе решение добавить нужно и дальше написать unit тесты, а так всё закончено
