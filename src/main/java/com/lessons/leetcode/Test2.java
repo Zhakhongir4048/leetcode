@@ -17,56 +17,31 @@ public class Test2 {
 
         char[] array = s.toCharArray();
 
-        int count = 0;
-
         List<String> stringList = new ArrayList<>();
 
         for (int right = 0; right < array.length; right++) {
             mapS.put(array[right], mapS.getOrDefault(array[right], 0) + 1);
 
-            if (mapT.containsKey(array[right]) && mapS.get(array[right]) > mapT.get(array[right])) {
-                mapS.put(array[left], mapS.get(array[left]) - 1);
-                if (mapS.get(array[left]) == 0) {
-                    mapS.remove(array[left]);
-                }
-                left++;
-
-                while (!mapT.containsKey(array[left])) {
-                    mapS.put(array[left], mapS.get(array[left]) - 1);
-                    if (mapS.get(array[left]) == 0) {
-                        mapS.remove(array[left]);
-                    }
-                    left++;
-                }
-            }
-
             if (mapS.entrySet().containsAll(mapT.entrySet())) {
-                count = right - left + 1;
-
-
-
-                mapS.put(array[left], mapS.get(array[left]) - 1);
-                if (mapS.get(array[left]) == 0) {
-                    mapS.remove(array[left]);
-                }
-                left++;
-
-                while (!mapT.containsKey(array[left])) {
-                    mapS.put(array[left], mapS.get(array[left]) - 1);
-                    if (mapS.get(array[left]) == 0) {
-                        mapS.remove(array[left]);
-                    }
-                    left++;
-                }
+                stringList.add(s.substring(left, right + 1));
             }
         }
 
-        System.out.println(count);
+        if (!stringList.isEmpty()) {
+            String shortest = stringList.get(0);
+            for (String str : stringList) {
+                if (str.length() < shortest.length()) {
+                    shortest = str;
+                }
+            }
+            return shortest;
+        }
 
         return "";
     }
 
     public static void main(String[] args) {
-        minWindow("ADOBECODEBANC", "ABC");
+        System.out.println(minWindow("ADOBECOD", "ABC"));
+//        System.out.println(minWindow("ab", "a"));
     }
 }
