@@ -54,6 +54,7 @@ public class Test2 {
                     }
                     left++;
                 } while (!mapT.containsKey(array[left]));
+                if (mapS.entrySet().containsAll(mapT.entrySet())) stringList.add(s.substring(left, right + 1));
             }
         }
 
@@ -70,10 +71,12 @@ public class Test2 {
     }
 
     public static void main(String[] args) {
-//        System.out.println(minWindow("ADOBECODEBANC", "ABC"));
-//        System.out.println(minWindow("ab", "b"));
-//        System.out.println(minWindow("ba", "a"));
-//        System.out.println(minWindow("abc", "ab"));
+        System.out.println(minWindow("ADOBECODEBANC", "ABC"));
+        System.out.println(minWindow("ab", "b"));
+        System.out.println(minWindow("ba", "a"));
+        System.out.println(minWindow("abc", "ab"));
         System.out.println(minWindow("acbbaca", "aba"));
+//         cabwe, fgewcwa, cwae
+        System.out.println(minWindow("cabwefgewcwaefgcf", "cae"));
     }
 }
