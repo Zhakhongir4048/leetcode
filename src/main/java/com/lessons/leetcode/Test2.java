@@ -24,6 +24,14 @@ public class Test2 {
 
             if (mapS.entrySet().containsAll(mapT.entrySet())) {
                 stringList.add(s.substring(left, right + 1));
+
+                do {
+                    mapS.put(array[left], mapS.get(array[left]) - 1);
+                    if (mapS.get(array[left]) == 0) {
+                        mapS.remove(array[left]);
+                        left++;
+                    }
+                } while (!mapT.containsKey(array[left]));
             }
         }
 
@@ -41,7 +49,7 @@ public class Test2 {
     }
 
     public static void main(String[] args) {
-        System.out.println(minWindow("ADOBECOD", "ABC"));
-//        System.out.println(minWindow("ab", "a"));
+        System.out.println(minWindow("ADOBECODEBANC", "ABC"));
+        System.out.println(minWindow("a", "aa"));
     }
 }
