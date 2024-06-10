@@ -18,4 +18,4 @@
 16) https://leetcode.com/problems/minimum-window-substring/description/
 17) https://leetcode.com/problems/remove-duplicates-from-sorted-array/description/
 18) https://leetcode.com/problems/intersection-of-two-arrays/description/
-19) 
+19) https://leetcode.com/problems/height-checker/description/
