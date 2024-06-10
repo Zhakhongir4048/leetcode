@@ -17,4 +17,5 @@
 15) https://leetcode.com/problems/maximum-length-substring-with-two-occurrences/description/
 16) https://leetcode.com/problems/minimum-window-substring/description/
 17) https://leetcode.com/problems/remove-duplicates-from-sorted-array/description/
-18) 
+18) https://leetcode.com/problems/intersection-of-two-arrays/description/
+19) 
