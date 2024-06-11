@@ -2,6 +2,8 @@ package com.lessons.leetcode;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.PriorityQueue;
+import java.util.Queue;
 
 public class Test {
 
@@ -57,5 +59,35 @@ public class Test {
             }
         }
         System.out.println(result);
+    }
+
+    public int missingNumber(int[] nums) {
+        Queue<Integer> queue = new PriorityQueue<>();
+        for (int e : nums)
+            queue.add(e);
+
+        boolean isZero = queue.contains(0);
+
+        if (queue.size() == 1) {
+            if (queue.peek() == 1) return 0;
+            else return queue.poll() + 1;
+        }
+
+        while (!queue.isEmpty()) {
+            Integer current = queue.poll();
+            Integer next = queue.peek();
+
+            if (next != null) {
+                if (next - current != 1) return current + 1;
+            } else {
+                if (isZero) {
+                    return current + 1;
+                } else {
+                    return 0;
+                }
+            }
+        }
+
+        return -1;
     }
 }
