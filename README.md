@@ -20,3 +20,4 @@
 18) https://leetcode.com/problems/intersection-of-two-arrays/description/
 19) https://leetcode.com/problems/height-checker/description/
 20) https://leetcode.com/problems/unique-number-of-occurrences/description/
+21) https://leetcode.com/problems/existence-of-a-substring-in-a-string-and-its-reverse/description/
