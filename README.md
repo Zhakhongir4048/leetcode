@@ -21,3 +21,6 @@
 19) https://leetcode.com/problems/height-checker/description/
 20) https://leetcode.com/problems/unique-number-of-occurrences/description/
 21) https://leetcode.com/problems/existence-of-a-substring-in-a-string-and-its-reverse/description/
+22) https://leetcode.com/problems/first-letter-to-appear-twice/description/
+23) https://leetcode.com/problems/check-if-string-is-a-prefix-of-array/description/
+24) 
