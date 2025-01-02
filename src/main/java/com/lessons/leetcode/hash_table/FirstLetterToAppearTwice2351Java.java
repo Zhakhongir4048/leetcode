@@ -6,7 +6,7 @@ import java.util.HashMap;
  * Ready
  * <a href="https://leetcode.com/problems/first-letter-to-appear-twice/description/">...</a>
  */
-public class FirstLetterToAppearTwice2351 {
+public class FirstLetterToAppearTwice2351Java {
 
     public char repeatedCharacter(String s) {
         HashMap<Character, Integer> map = new HashMap<>();

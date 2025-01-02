@@ -8,7 +8,7 @@ import java.util.Map;
  * Ready
  * <a href="https://leetcode.com/problems/two-sum/description/">...</a>
  */
-public class TwoSum1 {
+public class TwoSum1Java {
 
     public int[] twoSum(int[] nums, int target) {
         Map<Integer, Integer> numToIndex = new HashMap<>();
