@@ -11,12 +11,12 @@ import java.util.Map;
 public class TwoSum1 {
 
     public int[] twoSum(int[] nums, int target) {
-        Map<Integer, Integer> numsMap = new HashMap<>();
+        Map<Integer, Integer> numToIndex = new HashMap<>();
         for (int i = 0; i < nums.length; i++) {
-            Integer find = numsMap.get(target - nums[i]);
-            if (find != null)
-                return new int[]{find, i};
-            numsMap.put(nums[i], i);
+            if (numToIndex.containsKey(target - nums[i])) {
+                return new int[]{numToIndex.get(target - nums[i]), i};
+            }
+            numToIndex.put(nums[i], i);
         }
         return new int[]{};
     }
