@@ -1,5 +1,9 @@
 package com.lessons.leetcode.two_pointers;
 
+/**
+ * Ready
+ * <a href="https://leetcode.com/problems/merge-strings-alternately/description/">...</a>
+ */
 public class MergeStringsAlternately1768Java {
 
     public String mergeAlternately(String word1, String word2) {
