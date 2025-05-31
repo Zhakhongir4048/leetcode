@@ -12,9 +12,9 @@ public class ValidPalindrome125Java {
         char[] array = s.toCharArray();
 
         while (left <= right) {
-            if (!isLetterOrDigit(array[left])) {
+            if (isLetterOrDigit(array[left])) {
                 left++;
-            } else if (!isLetterOrDigit(array[right])) {
+            } else if (isLetterOrDigit(array[right])) {
                 right--;
             } else if (toLowerCase(array[left]) != toLowerCase(array[right])) {
                 return false;
@@ -26,11 +26,15 @@ public class ValidPalindrome125Java {
         return true;
     }
 
-    public boolean isLetterOrDigit(char c) {
-        return (((c >= '0') && (c <= '9')) || (c >= 'a') && (c <= 'z') || (c >= 'A') && (c <= 'Z'));
+    private boolean isLetterOrDigit(char source) {
+        return (source >= 'A' && source <= 'Z') || (source >= 'a' && source <= 'z') || (source >= '0' && source <= '9');
     }
 
-    public static char toLowerCase(char c) {
-        return (c >= 'A' && c <= 'Z') ? (char) ('a' + (c - 'A')) : c;
+    private char toLowerCase(char source) {
+        if (source >= 'A' && source <= 'Z') {
+            return (char) ('a' + (source - 'A'));
+        }
+        return source;
     }
+
 }

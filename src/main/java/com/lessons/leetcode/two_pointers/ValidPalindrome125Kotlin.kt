@@ -21,8 +21,8 @@ class ValidPalindrome125Kotlin {
         return true
     }
 
-    private fun isLetterOrDigit(c: Char): Boolean =
-        (((c >= '0') && (c <= '9')) || (c >= 'a') && (c <= 'z') || (c >= 'A') && (c <= 'Z'))
+    private fun isLetterOrDigit(source: Char): Boolean =
+        (source in 'A'..'Z') || (source in 'a'..'z') || (source in '0'..'9');
 
     private fun toLowerCase(c: Char): Char {
         if (c in 'A'..'Z') {
